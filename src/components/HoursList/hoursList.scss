@@ -1,0 +1,20 @@
+@import "~variables";
+
+.hours-list{
+  text-align: right;
+  position: relative;
+}
+
+.hours-list-hmp{
+  position: absolute;
+  right: 0;
+}
+
+.hours-list-hour-and-minute{
+  font-weight: 500;
+}
+.hours-list-period{
+  color: $light-grey;
+  font-size: 8px;
+  margin-left: 5px;
+}
