@@ -50,7 +50,7 @@ layOutDay function definition:
 
 - [src/utils/layOutDay.js#L16](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/utils/layOutDay.js#L16)
 
-#Part II
+# Part II
 
 event data fetching:
 
