@@ -24,7 +24,12 @@ export default class Event extends React.PureComponent {
       <div className="event" style={eventStyle}>
         <div className="event-inner">
           <div className='event-content'>
-            {this.props.id}
+            <h3 className='event-title'>
+              Sample Item
+            </h3>
+            <p className='event-body'>
+              Sample Location
+            </p>
           </div>
         </div>
       </div>

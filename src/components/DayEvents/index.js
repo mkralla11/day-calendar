@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import './dayEvents.scss';
 import Event from 'components/Event';
 import {map} from 'ramda';
+import sizeMe from 'react-sizeme'
 
-export default class DayEvents extends React.PureComponent {
+ class DayEvents extends React.PureComponent {
   static propTypes = {
     eventPositions: PropTypes.array.isRequired
   }
@@ -14,7 +15,7 @@ export default class DayEvents extends React.PureComponent {
 
 
   render(){
-    console.log(this.props.eventPositions)
+
     return (
       <div className="day-events">
         <div className="day-events-inner">
@@ -24,3 +25,5 @@ export default class DayEvents extends React.PureComponent {
     )
   }
 }
+
+export default sizeMe()(DayEvents)

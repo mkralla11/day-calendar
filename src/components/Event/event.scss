@@ -15,3 +15,18 @@
 .event-content{
   padding: 10px;
 }
+
+.event-title{
+  font-size: 12px;
+  line-height: 14px;
+  color: $light-blue;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.event-body{
+  font-size: 10px;
+  line-height: 12px;
+  color: $light-grey;
+  font-weight: 200;
+}

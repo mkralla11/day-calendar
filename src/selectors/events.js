@@ -1,20 +1,18 @@
 import layOutDay from 'utils/layOutDay';
 import {path, compose, values} from 'ramda';
 import { createSelector } from 'reselect';
+import {selectEventsContainerWidth} from 'selectors/eventsContainer';
 
 const selectEvents = path(['events', 'events']);
-
-const toArrayLayOutDay = compose(
-  layOutDay,
-  values
-);
 
 
 export function makeSelectCalculatedEventPositions(){
   return createSelector(
    selectEvents,
-    (events) => {
-      return toArrayLayOutDay(events);
+   selectEventsContainerWidth,
+    (events, containerWidth) => {
+      events = values(events);
+      return layOutDay(events, {containerWidth});
     }
   );
 }

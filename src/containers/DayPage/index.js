@@ -4,14 +4,21 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Day from 'components/Day';
 import {getOrFetchEventsFlow} from 'actionCreators/events';
+import {setEventsContainerWidth} from 'actions/eventsContainer';
 import {makeSelectCalculatedEventPositions} from 'selectors/events';
 
-export const DayPage = (props) => {
-  return (
-    <Day
-      {...props}
-      />
-  );
+class DayPage extends React.Component {
+  onEventsContainerResize = ({width})=>
+    this.props.setEventsContainerWidth(width)
+  
+  render(){
+    return (
+      <Day
+        {...this.props}
+        onEventsContainerResize={this.onEventsContainerResize}
+        />
+    );
+  }
 };
 
 DayPage.propTypes = {
@@ -30,6 +37,7 @@ const makeMapStateToProps = () => {
 function mapDispatchToProps(dispatch) {
   return {
     getOrFetchEventsFlow: bindActionCreators(getOrFetchEventsFlow, dispatch),
+    setEventsContainerWidth: bindActionCreators(setEventsContainerWidth, dispatch)
   };
 }
 

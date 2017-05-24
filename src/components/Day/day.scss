@@ -1,8 +1,10 @@
+@import "~variables";
 
 .day-root{
   height: 100%;
   padding: 10px;
-  max-width: 700px;
+  // compensate for 1px border so .day-events is exactly 600px
+  max-width: 701px;
   margin: 20px auto;
   display: flex;
 
@@ -11,9 +13,16 @@
   }
 
   .day-events-outer{
+    border-left: 1px solid $more-light-grey;
+    background-color: $lighter-grey;
     flex: 1 1 auto;
     margin: 0 10px;
-    max-width: 620px;
+    // compensate for 1px border and padding
+    max-width: 621px;
+  }
+
+  .day-events-pad{
+    padding: 0 10px;
   }
 
 }

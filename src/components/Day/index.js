@@ -6,7 +6,8 @@ import DayEvents from 'components/DayEvents';
 
 export default class Day extends React.PureComponent {
   static propTypes = {
-    getOrFetchEventsFlow: PropTypes.func.isRequired
+    getOrFetchEventsFlow: PropTypes.func.isRequired,
+    onEventsContainerResize: PropTypes.func.isRequired
   }
 
   componentDidMount(){
@@ -20,9 +21,12 @@ export default class Day extends React.PureComponent {
           <HoursList/>
         </div>
         <div className="day-events-outer">
-          <DayEvents 
-            eventPositions={this.props.eventPositions}
-            />
+          <div className="day-events-pad">
+            <DayEvents 
+              eventPositions={this.props.eventPositions}
+              onSize={this.props.onEventsContainerResize}
+              />
+          </div>
         </div>
       </div>
     )
