@@ -13,18 +13,24 @@ A POC of calendar event collision visual remediation on a single day view spanni
 
 - clone repository (optional if received via zip):
 
-  git clone https://github.com/mkralla11/day-calendar
+```
+git clone https://github.com/mkralla11/day-calendar
+```
 
 - install dependencies:
 
-  cd day-calendar
-  #(optional: install yarn globally)
-  npm install -g yarn
-  yarn
+```
+cd day-calendar
+#(optional: install yarn globally)
+npm install -g yarn
+yarn
+```
 
 - start server:
 
-  npm start
+```
+npm start
+```
 
 The browser should automatically open with a given port.
 
