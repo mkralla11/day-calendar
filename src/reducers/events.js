@@ -44,7 +44,7 @@ const setError = (state, action)=>{
     .set('loading', false);
 }
 
-const setLoading = (state, action)=>{
+const setLoading = (state)=>{
   return state
     .set('loading', true)
     .set('error', false);
@@ -55,7 +55,6 @@ function eventsReducer(state = initialState, action) {
     case GET_OR_FETCH_EVENTS:
       return setLoading(state, action);
     case GET_OR_FETCH_EVENTS_SUCCESS:
-      console.log(action);
       return mergeEvents(state, action);
     case GET_OR_FETCH_EVENTS_ERROR:
       return setError(state, action);

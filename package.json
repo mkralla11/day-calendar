@@ -152,9 +152,7 @@
   "eslintConfig": {
     "root": true,
     "extends": [
-      "eslint:recommended",
-      "plugin:import/errors",
-      "plugin:import/warnings"
+      "eslint:recommended"
     ],
     "plugins": [
       "react"
@@ -180,10 +178,7 @@
       "no-console": 1,
       "no-debugger": 1,
       "no-var": 1,
-      "semi": [
-        1,
-        "always"
-      ],
+      "semi": 0,
       "no-trailing-spaces": 0,
       "eol-last": 0,
       "no-underscore-dangle": 0,
@@ -228,9 +223,7 @@
       "react/no-set-state": 0,
       "react/no-unknown-property": 1,
       "react/prefer-es6-class": 1,
-      "react/prop-types": 1,
       "react/react-in-jsx-scope": 1,
-      "import/extensions": 1,
       "react/self-closing-comp": 1,
       "react/sort-comp": 1
     },

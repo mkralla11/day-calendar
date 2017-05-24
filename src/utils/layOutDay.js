@@ -1,4 +1,4 @@
-import {slice, sortWith, compose, max, keys, ascend, prop, values, lensProp, set, map, flatten, reduce} from 'ramda';
+import {sortWith, compose, max, keys, ascend, prop, values, lensProp, set, map, flatten, reduce} from 'ramda';
 import {reduceIndexed, mapIndexed} from 'utils/general';
 
 /**

@@ -1,5 +1,5 @@
 import layOutDay from 'utils/layOutDay';
-import {path, compose, values} from 'ramda';
+import {path, values} from 'ramda';
 import { createSelector } from 'reselect';
 import {selectEventsContainerWidth} from 'selectors/eventsContainer';
 

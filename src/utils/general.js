@@ -1,4 +1,4 @@
-import {map, addIndex, modulo, __, not, compose, reduce, apply, keys} from 'ramda';
+import {map, addIndex, modulo, __, compose, reduce, apply, keys} from 'ramda';
 import {MINUTE_OFFSET} from 'constants/general';
 
 export const mapIndexed = addIndex(map);

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Day from 'components/Day';
@@ -19,14 +19,13 @@ class DayPage extends React.Component {
         />
     );
   }
-};
+}
 
-DayPage.propTypes = {
-};
+
 
 const makeMapStateToProps = () => {
   const selectCalculatedEventPositions = makeSelectCalculatedEventPositions();
-  const mapStateToProps = (state, props) => {
+  const mapStateToProps = (state) => {
     return {
       eventPositions: selectCalculatedEventPositions(state)
     }

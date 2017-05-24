@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './hoursList.scss';
-import {times, map} from 'ramda';
+import {times, merge} from 'ramda';
 import {fromMinutesToTimePeriodWithOffset, mapIndexed, isOdd} from 'utils/general';
-import {merge} from 'ramda';
 // given 720 minutes per requirements, 
 // (total minutes between 9am - 9pm)
 // divided by 30 minute intervals
