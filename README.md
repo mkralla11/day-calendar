@@ -58,7 +58,7 @@ application entry point:
 - [src/index.js](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/index.js)
 
 
-#Notes
+# Notes
 
 - Per request, library source files will be included in a zip in the deliverable. 
 - Testing framework has been put in place and is readily available to be used, but do to time constraints, unit tests are not included.
@@ -67,7 +67,7 @@ application entry point:
 
 
 
-#Doc Discrepancies
+# Doc Discrepancies
 
 The requirements stated that events provided by Firebase would return:
 
