@@ -42,7 +42,7 @@ The browser should automatically open with a given port.
 
 layOutDay function definition:
 
- - [src/utils/layOutDay.js#L16](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/utils/layOutDay.js#L16)
+- [src/utils/layOutDay.js#L16](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/utils/layOutDay.js#L16)
 
 #Part II
 
@@ -55,7 +55,7 @@ event data fetching:
 
 application entry point:
 
- - [src/index.js](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/index.js)
+- [src/index.js](https://github.com/mkralla11/day-calendar/blob/v0.1.0/src/index.js)
 
 
 #Notes
