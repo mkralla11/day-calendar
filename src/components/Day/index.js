@@ -5,6 +5,14 @@ import HoursList from 'components/HoursList';
 import DayEvents from 'components/DayEvents';
 
 export default class Day extends React.PureComponent {
+  static propTypes = {
+    getOrFetchEventsFlow: PropTypes.func.isRequired
+  }
+
+  componentDidMount(){
+    this.props.getOrFetchEventsFlow();
+  }
+
   render(){
     return (
       <div className="day-root">
@@ -12,7 +20,9 @@ export default class Day extends React.PureComponent {
           <HoursList/>
         </div>
         <div className="day-events-outer">
-          <DayEvents/>
+          <DayEvents 
+            eventPositions={this.props.eventPositions}
+            />
         </div>
       </div>
     )

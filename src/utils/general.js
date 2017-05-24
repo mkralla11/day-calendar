@@ -1,9 +1,14 @@
-import {map, addIndex, modulo, __, not, compose} from 'ramda';
+import {map, addIndex, modulo, __, not, compose, reduce, apply, keys} from 'ramda';
+import {MINUTE_OFFSET} from 'constants/general';
 
 export const mapIndexed = addIndex(map);
+export const reduceIndexed = addIndex(reduce);
 
 export const isOdd = modulo(__, 2);
-
+export const maxKey = compose(
+  apply(Math.max),
+  keys
+)
 
 export function fromMinutesToTimePeriod(minutes){
   let h = Math.floor(minutes / 60);
@@ -26,3 +31,7 @@ export function fromMinutesToTimePeriod(minutes){
 }
 
 
+
+export function fromMinutesToTimePeriodWithOffset(minutes){
+  return fromMinutesToTimePeriod(minutes + MINUTE_OFFSET);
+}

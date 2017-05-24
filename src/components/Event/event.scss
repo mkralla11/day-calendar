@@ -1,0 +1,17 @@
+@import "~variables";
+
+.event{
+  position: absolute;
+}
+
+.event-inner{
+  background-color: $white;
+  border: 1px solid $more-light-grey;
+  border-left: 4px solid $light-blue;
+  height: 100%;
+  max-width: 100%;
+}
+
+.event-content{
+  padding: 10px;
+}

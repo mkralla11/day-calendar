@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './hoursList.scss';
 import {times, map} from 'ramda';
-import {MINUTE_OFFSET} from 'constants/general';
-import {fromMinutesToTimePeriod, mapIndexed, isOdd} from 'utils/general';
+import {fromMinutesToTimePeriodWithOffset, mapIndexed, isOdd} from 'utils/general';
 import {merge} from 'ramda';
 // given 720 minutes per requirements, 
 // (total minutes between 9am - 9pm)
@@ -26,11 +25,11 @@ function generateTimeIntervals(){
       // given interval n,
       // multiply by 30 minute interval,
       // add offset from start of day to normalize data
-      const baseMinutes = n * 30
-      const time = fromMinutesToTimePeriod((baseMinutes) + MINUTE_OFFSET)
-      return {...time, baseMinutes}
+      const baseMinutes = n * 30;
+      const time = fromMinutesToTimePeriodWithOffset(baseMinutes);
+      return {...time, baseMinutes};
     }
-  , intervals)
+  , intervals);
 }
 
 export default class HoursList extends React.PureComponent {
@@ -56,7 +55,7 @@ export default class HoursList extends React.PureComponent {
         fontSize: offHourHeightPx,
         lineHeight: offHourHeightPx,
         color: '#a7a7a7'
-      })
+      });
     }
 
 
@@ -65,7 +64,7 @@ export default class HoursList extends React.PureComponent {
       hmpStyles,
       t,
       hasPeriod: !odd
-    }) 
+    });
   }
 
 

@@ -1,9 +1,10 @@
-// Set up your root reducer here...
- import { combineReducers } from 'redux';
-import {routerReducer} from 'react-router-redux';
+import { combineReducers, routerReducer } from 'redux-seamless-immutable';
+import { from as fromJS } from 'seamless-immutable';
+import events from 'reducers/events';
 
 const rootReducer = combineReducers({
-  routing: routerReducer
+  routing: routerReducer,
+  events
 });
 
 export default rootReducer;
